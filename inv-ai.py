@@ -5,7 +5,9 @@ import pyperclip
 from openai import OpenAI
 from pynput.keyboard import Key, KeyCode, GlobalHotKeys, Listener
 
-client = OpenAI(api_key='ur-api-key-here')
+# OpenAI API key
+apikeyFile = open("secret.key", "r")
+client = OpenAI(api_key=apikeyFile.read())
 
 # conf
 collect_key = "<cmd>+t"
