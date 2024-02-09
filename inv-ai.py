@@ -13,7 +13,8 @@ with open("secret.key", "r") as apikeyFile:
     client = OpenAI(api_key=apikeyFile.read())
 
 # Configuration: Define the hotkey for sending clipboard content
-send_key = "<cmd>+i"  # Adjust the hotkey as needed
+    
+send_key = "<alt>+i"  # Adjust the hotkey as needed
 
 # Function to send the clipboard content to the OpenAI API
 def send_clipboard_text():
@@ -45,3 +46,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
